@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "postcss": "^8.3.11"
-  }
+  },
+  "name": "postcss-rs-parser-tests",
+  "version": "1.0.0",
+  "main": "generate.js",
+  "devDependencies": {},
+  "scripts": {
+    "clean:custom": "rm ./custom-cases/*.ast"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/postcss-rs/postcss-rs-parser-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/postcss-rs/postcss-rs-parser-tests/issues"
+  },
+  "homepage": "https://github.com/postcss-rs/postcss-rs-parser-tests#readme",
+  "description": ""
 }
