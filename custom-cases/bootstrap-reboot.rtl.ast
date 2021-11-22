@@ -811,4 +811,4 @@ select`
     selector: `[hidden]`
     Declaration@7475..7500
       prop: `display`
-      value: `none`
+      value: `none !important`

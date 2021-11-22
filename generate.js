@@ -81,7 +81,9 @@ function generateDeclaration(node, level, source) {
   let string = "";
   string += `${" ".repeat(level * 2)}Declaration@${start.offset}..${end.offset + 1}\n`;
   string += `${" ".repeat((level + 1) * 2)}prop: \`${node.prop}\`\n`;
-  string += `${" ".repeat((level + 1) * 2)}value: \`${node.raws?.value?.raw ?? node.value}\`\n`;
+  string += `${" ".repeat((level + 1) * 2)}value: \`${node.raws?.value?.raw ?? node.value}${
+    node.important ? node.raws.important ?? " !important" : "" 
+  }\`\n`;
   return string;
 }
 const dir = "./custom-cases";
@@ -89,7 +91,7 @@ let fileList = fs.readdirSync(dir);
 fileList.forEach(fileName => {
   const concatPath = `${dir}/${fileName}`;
   let file = fs.readFileSync(concatPath).toString();
-  const root = postcss.parse(file);
-  const astFile = generate(root, 0, file)
-  fs.writeFileSync(dir + '/' +   path.parse(fileName).name + ".ast", astFile)
+  const root = postcss.parse(file,);
+  const astFile = generate(root, 0, file);
+  fs.writeFileSync(dir + "/" + path.parse(fileName).name + ".ast", astFile);
 });
