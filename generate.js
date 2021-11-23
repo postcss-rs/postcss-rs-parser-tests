@@ -81,7 +81,7 @@ function generateDeclaration(node, level, source) {
   let string = "";
   string += `${" ".repeat(level * 2)}Declaration@${start.offset}..${end.offset + 1}\n`;
   string += `${" ".repeat((level + 1) * 2)}prop: \`${node.prop}\`\n`;
-  string += `${" ".repeat((level + 1) * 2)}value: \`${node.raws?.value?.raw ?? node.value}${
+  string += `${" ".repeat((level + 1) * 2)}value: \`${node.raws?.value?.raw?.trimEnd() ?? node.value}${
     node.important ? node.raws.important ?? " !important" : "" 
   }\`\n`;
   return string;
