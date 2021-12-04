@@ -3,4 +3,4 @@ Root@0..27
     selector: `a`
     Declaration@4..24
       prop: `color`
-      value: `a/* ; */ b  `
+      value: `a/* ; */ b`

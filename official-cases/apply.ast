@@ -12,5 +12,4 @@ Root@0..122
       value: `{
     width: 16px;
     height: 16px;
-  }
-  `
+  }`
