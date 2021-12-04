@@ -7,7 +7,11 @@
   "main": "generate.js",
   "devDependencies": {},
   "scripts": {
-    "clean:custom": "rm ./custom-cases/*.ast"
+    "clean:custom": "rm ./custom-cases/*.ast",
+    "clean:official": "rm ./official-cases/*.ast",
+    "generate:custom": "npm run clean:custom && node generate.js custom-cases",
+    "generate:official": "npm run clean:official && node generate.js official-cases"
+
   },
   "repository": {
     "type": "git",
